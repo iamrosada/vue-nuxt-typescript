@@ -13,7 +13,7 @@ export class SearchComponent extends Vue {
   }
   @Emit()
   handleChange(){
-  const foundStudent = this.listOfStudents.some((item)=>item.toLowerCase()===this.nameFind)
+  const foundStudent = this.listOfStudents.some((item)=>item.toLowerCase()===this.nameFind.toLowerCase())
   console.log(this.nameFind, foundStudent)
   }
 
