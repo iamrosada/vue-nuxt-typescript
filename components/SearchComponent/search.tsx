@@ -3,11 +3,16 @@ import { Search, ContainerInput } from "./styles";
 import { Component, Emit, Prop, Watch } from "nuxt-property-decorator";
 @Component
 export class SearchComponent extends Vue {
+  nameFind: string =''
   @Emit()
   onInputChange(e){
-    console.log("vvvv--->", e.target.value)
-    return e.target.value
+   this.nameFind = e.target.value
+   return this.nameFind
 
+  }
+  @Emit()
+  handleChange(){
+  console.log(this.nameFind)
   }
 
   render() {
@@ -20,7 +25,7 @@ export class SearchComponent extends Vue {
             onChange={this.onInputChange}
 
           />
-          <button>Procurar</button>
+          <button onClick={this.handleChange}>Procurar</button>
         </div>
       </ContainerInput>
     );
