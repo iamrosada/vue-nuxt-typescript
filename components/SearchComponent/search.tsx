@@ -3,7 +3,8 @@ import { Search, ContainerInput } from "./styles";
 import { Component, Emit, Prop, Watch } from "nuxt-property-decorator";
 @Component
 export class SearchComponent extends Vue {
-  nameFind: string =''
+  nameFind: string ='';
+  listOfStudents: Array<string> = ['Apple', 'Orange', 'Banana'];
   @Emit()
   onInputChange(e){
    this.nameFind = e.target.value
@@ -12,7 +13,8 @@ export class SearchComponent extends Vue {
   }
   @Emit()
   handleChange(){
-  console.log(this.nameFind)
+  const foundStudent = this.listOfStudents.some((item)=>item.toLowerCase()===this.nameFind)
+  console.log(this.nameFind, foundStudent)
   }
 
   render() {
