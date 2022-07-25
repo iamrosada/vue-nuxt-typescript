@@ -12,3 +12,8 @@ export const getters = {
 export const actions = {
 
 }
+
+//mutations
+export const mutations = {
+
+}
