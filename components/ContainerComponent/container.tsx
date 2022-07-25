@@ -9,14 +9,20 @@ import { StatusComponent } from "../StatusPassPort/status"
 
 @Component({})
 export class ContainerComponent extends Vue{
+ get toggleComponent(){
+  return this.$store.state.isToggle.toggle
+ }
  render(){
   return(
   <Container>
     <HeaderComponent/>
     <Wrapper>
-      <WelcomeComponent/>
-      <SearchComponent />
+      {this.toggleComponent===false? <WelcomeComponent/> : null }
+      {/* <WelcomeComponent/> */}
+
+      {/* <SearchComponent /> */}
       {/* <StatusComponent/> */}
+      {this.toggleComponent===true ? <StatusComponent/> : <SearchComponent />}
     </Wrapper>
   </Container>
   )
