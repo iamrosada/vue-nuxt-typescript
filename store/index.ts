@@ -4,7 +4,7 @@ export const state = () => ({
 })
 
 //getters
-export const getters = () => ({
+export const getters = {
 
-})
+}
 
