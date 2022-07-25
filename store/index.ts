@@ -1,32 +1,13 @@
-//state
-export interface Istate {
-  nameFind: null | string
-}
-export const state = (): Istate => ({
-  nameFind: ''
+import Vue from 'vue'
+import Vuex from 'vuex'
+
+
+Vue.use(Vuex)
+const store = new Vuex.Store({
+  modules: {
+
+  }
+
 })
 
-//getters
-export const getters = {
-
-}
-
-//actions
-export const actions = {
-  getStudent({ commit, event }) {
-    const listOfStudents = ['Apple', 'Orange', 'Banana'];
-
-    // commit("findStudent", listOfStudents)
-
-    return listOfStudents
-  }
-}
-
-//mutations
-export const mutations = {
-  findStudent(state, listOfStudents) {
-
-  }
-}
-
-
+export default store
