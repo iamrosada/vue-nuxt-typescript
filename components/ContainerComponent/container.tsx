@@ -5,11 +5,19 @@ import { WelcomeComponent } from "../Welcome/welcome"
 import { SearchComponent } from "../SearchComponent/search"
 import { HeaderComponent } from "../Header/header"
 import { StatusComponent } from "../StatusPassPort/status"
+import { mapActions } from "vuex"
 // import {CardComponent} from '../CardProduct/cardProduct'
 
+// @Component({computed:{
+//   // ...mapActions(['isToggle/toggleActive'])
+// }})
 @Component({})
 export class ContainerComponent extends Vue{
- get toggleComponent(){
+  get toggleActive(){
+    return this.$store.commit('toggleActive')
+  }
+  get toggleComponent(){
+  console.log(this.$store.state.toggle,"this.$store.state.isToggle.toggle")
   return this.$store.state.isToggle.toggle
  }
  render(){
@@ -17,6 +25,7 @@ export class ContainerComponent extends Vue{
   <Container>
     <HeaderComponent/>
     <Wrapper>
+
       {this.toggleComponent===false? <WelcomeComponent/> : null }
       {/* <WelcomeComponent/> */}
 
