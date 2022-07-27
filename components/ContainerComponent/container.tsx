@@ -11,27 +11,45 @@ import { mapActions } from "vuex"
 // @Component({computed:{
 //   // ...mapActions(['isToggle/toggleActive'])
 // }})
-@Component({})
-export class ContainerComponent extends Vue{
-  get toggleActive(){
-    return this.$store.commit('toggleActive')
+@Component({
+  computed:{
+    toggleComponent(){
+      return this.$store.state.isToggle.toggle
+    }
   }
-  get toggleComponent(){
-  console.log(this.$store.state.toggle,"this.$store.state.isToggle.toggle")
-  return this.$store.state.isToggle.toggle
- }
+})
+export class ContainerComponent extends Vue{
+  public toggleComponent!: () => boolean;
+  // get toggleActive(){
+  //   return this.$store.commit('toggleActive')
+  // }
+  // get toggleComponent(){
+  //  return this.$store.state.isToggle.toggle
+  // }
+  // // get getActive(){
+  // //   return this.$store.state.toggle
+  // // }
+  // set toggleComponent(value){
+  //   console.log(value)
+  //   this.$store.state.isToggle.toggle = value
+  // }
+  mounted(){
+    console.log('virifando')
+  }
  render(){
   return(
   <Container>
     <HeaderComponent/>
+    v {this.toggleComponent}
     <Wrapper>
 
-      {this.toggleComponent===false? <WelcomeComponent/> : null }
-      {/* <WelcomeComponent/> */}
+      {Boolean(this.toggleComponent)===false? <WelcomeComponent/> : null }
+      {/* <WelcomeComponent/>  */}
 
       {/* <SearchComponent /> */}
       {/* <StatusComponent/> */}
-      {this.toggleComponent===true ? <StatusComponent/> : <SearchComponent />}
+
+      {Boolean(this.toggleComponent)=== true ? <StatusComponent/> : <SearchComponent />}
     </Wrapper>
   </Container>
   )
