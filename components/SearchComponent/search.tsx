@@ -1,7 +1,7 @@
 import Vue, { ComponentOptions } from "vue";
 import { Search, ContainerInput } from "./styles";
 import { Component, Emit, Prop, Watch } from "nuxt-property-decorator";
-import { DefaultData, DefaultMethods, DefaultComputed, PropsDefinition, DefaultProps } from "vue/types/options";
+
 
 @Component({
   methods:{
@@ -45,7 +45,7 @@ export class SearchComponent extends Vue {
   render() {
     return (
       <ContainerInput>
-        {this.helloMessage}
+        {/* {this.helloMessage} */}
         <div>
           <Search
             type="text"
