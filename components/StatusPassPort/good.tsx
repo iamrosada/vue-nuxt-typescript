@@ -4,6 +4,11 @@ import { Component, Prop } from "nuxt-property-decorator"
 
 @Component({})
 export class GoodStatus extends Vue{
+
+  handleToggleToFalse(){
+    console.log('clicou')
+    this.$store.commit('toggleActive', false)
+  }
  render(){
   return(
  <Good>
@@ -14,7 +19,7 @@ export class GoodStatus extends Vue{
       O seu Passaporte já se encontra pronto, podes levantar na Embaixada de Angola em Moscovo.
     </p>
 
-    <button>
+    <button onClick={this.handleToggleToFalse}>
       Continuar a pesquisar
     </button>
  </Good>
