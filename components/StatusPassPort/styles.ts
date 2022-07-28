@@ -2,7 +2,7 @@ import styled from "vue-styled-components"
 
 export const ContainerStatus = styled("div")`
 
-  border-bottom: 1px solid #000;
+  //border-bottom: 1px solid #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +24,10 @@ export const ContainerStatus = styled("div")`
  `;
 
 export const Good = styled("section")`
-display: flex;
+ animation: backInLeft;
+ animation-duration: 1s;
+
+ display: flex;
 flex-direction: column;
 justify-content: start;
 align-items: flex-start;
@@ -60,3 +63,28 @@ align-items: flex-start;
   }
 
 `
+
+export const Hora = styled("div")`
+display: flex;
+flex-direction: column;
+
+ >ul{
+
+  list-style: none;
+  >li{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    >strong{
+      margin-top: 0.5rem;
+      color:#222222
+    }
+    >span{
+      /* color:#444444*/
+    color: #a9a9a9;
+    font-weight: bold;
+    font-style: normal;
+    }
+  }
+ }
+`;

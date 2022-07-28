@@ -14,6 +14,8 @@ export const Search = styled("input")`
  `;
 
 export const ContainerInput = styled("div")`
+ animation: backInRight;
+ animation-duration: 1s;
 display: flex;
 align-items: center;
  >div{
