@@ -12,14 +12,14 @@ import { mapActions } from "vuex"
 //   // ...mapActions(['isToggle/toggleActive'])
 // }})
 @Component({
-  computed:{
-    toggleComponent(){
-      return this.$store.state.isToggle.toggle
-    }
-  }
+  // computed:{
+  //   toggleComponent(){
+  //     return this.$store.state.isToggle.toggle
+  //   }
+  // }
 })
 export class ContainerComponent extends Vue{
-  public toggleComponent!: () => boolean;
+  // public toggleComponent!: () => boolean;
   // get toggleActive(){
   //   return this.$store.commit('toggleActive')
   // }
@@ -34,22 +34,22 @@ export class ContainerComponent extends Vue{
   //   this.$store.state.isToggle.toggle = value
   // }
   mounted(){
-    console.log('virifando')
+    console.log('virifando',this.$store.state.isToggle.toggle)
   }
  render(){
   return(
   <Container>
     <HeaderComponent/>
-    v {this.toggleComponent}
+    {/* v {this.$store.state.isToggle.toggle} */}
     <Wrapper>
 
-      {Boolean(this.toggleComponent)===false? <WelcomeComponent/> : null }
+      {this.$store.state.isToggle.toggle===false? <WelcomeComponent/> : null }
       {/* <WelcomeComponent/>  */}
 
       {/* <SearchComponent /> */}
       {/* <StatusComponent/> */}
 
-      {Boolean(this.toggleComponent)=== true ? <StatusComponent/> : <SearchComponent />}
+      {this.$store.state.isToggle.toggle=== true ? <StatusComponent/> : <SearchComponent />}
     </Wrapper>
   </Container>
   )
