@@ -1,3 +1,4 @@
+import { notify } from "@/utils/utils";
 import { ActionTree } from "vuex/types/index";
 import { RootState } from "../types";
 import { ToggleState } from "./types";
@@ -19,6 +20,11 @@ export const actions: ActionTree<ToggleState, RootState> = {
         commit('toggleActive', true)
       }
       if (resultado.length === 0) {
+        notify({
+          title: 'Error',
+          type: 'error',
+          message: 'Não foi encontrado o estudante'
+        })
         commit('toggleActive', false)
       }
       commit('getByName', data.sheet1)
