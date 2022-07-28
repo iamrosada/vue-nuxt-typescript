@@ -46,13 +46,13 @@ align-items: flex-start;
   >button{
     margin-top: 4rem;
     font-size: 2rem;
-    background-color: yellow;
+    background-color: #ffc127;
     border-radius: 0.4rem;
     width: 100%;
     height: 6rem ;
     font-weight: 700;
     font-size: 2rem;
-    border: 2px solid yellow;
+    border: 2px solid #ffc127;
     :hover{
       background-color: #c8c81d;
       transition: 1s;
