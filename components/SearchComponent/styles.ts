@@ -4,13 +4,15 @@ export const Search = styled("input")`
  border-color: #ffc127;
  border-radius: 6px 0 0 6px;
  height: 8.5rem;
- width: 400px;
+ max-width: 400px;
+ width: 100%;
  padding: 2rem;
- font-size: 2rem;
+ font-size: min(2rem, 5vw);
  :focus{
    outline: none;
 
  }
+
  `;
 
 export const ContainerInput = styled("div")`
@@ -25,10 +27,11 @@ align-items: center;
   align-items: center;
     >button{
     color: red;
-    width: 15rem;
+    max-width: 15rem;
     height: 8.5rem;
+
     padding: 2rem;
-    font-size: 2.5rem;
+    font-size: min(2.5rem, 5vw);
     background-color: #ffc127;
 
     border: none;
@@ -38,6 +41,18 @@ align-items: center;
     :hover{
       background-color: #ffc119;
     }
+
+  }
+  @media (min-width:190px) and (max-width:790px) {
+
+     margin-top: 25px;
+     >input{
+      height: max(8.5rem, 5vw);
+     }
+     >button{
+      height: max(8.5rem, 5vw);
+     }
+
 
   }
 }

@@ -9,18 +9,7 @@ export const ContainerStatus = styled("div")`
   align-content: center;
   max-width: 1100px;
   margin: 0 auto;
-  >div#embassy-container{
-    >img#embassy{
-      width: 300px;
-      height: 120px;
-    }
-  }
-  >div#container-sme{
-    >img{
-      width: 600px;
-      height: 120px;
-    }
-  }
+
  `;
 
 export const Good = styled("section")`
@@ -50,7 +39,7 @@ align-items: flex-start;
     margin-top: 4rem;
     font-size: 2rem;
     background-color: #ffc127;
-    border-radius: 0.4rem;
+    border-radius: 4px;
     width: 100%;
     height: 6rem ;
     font-weight: 700;

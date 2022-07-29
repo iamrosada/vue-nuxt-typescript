@@ -1,7 +1,6 @@
 import Vue from "vue"
 import {GoogleM} from "./styles"
 import { Component } from "nuxt-property-decorator";
-import {} from 'vue2-google-maps'
 
 /**
  * Esse component foi criado para eu mostrar
