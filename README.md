@@ -13,6 +13,13 @@ $ npm run dev
 
 ```
 
+
+
+https://user-images.githubusercontent.com/59142372/182131955-30872ac1-55df-4a9e-bf4a-fecc92386d9c.mp4
+
+
+
+
 Esse é um simples projeto em vue.tsx- a lista onde estão a ser pesquisada os nomes é essa https://docs.google.com/spreadsheets/d/1Gc_c4mJtczKC6YETY_SCH9ayHsEBRBWDvTKvZujt66M/edit?usp=sharing
 
 
