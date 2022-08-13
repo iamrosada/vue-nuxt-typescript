@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Embaixada de Angola na Rússia (SME)",
+    title: "Pesquisa o Seu documento (SME)",
     htmlAttrs: {
       lang: "en",
     },
