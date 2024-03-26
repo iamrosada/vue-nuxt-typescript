@@ -5,7 +5,7 @@ import { Component, Prop } from "nuxt-property-decorator";
 const urlImgSme =
   "https://www.sme.gov.ao/wp-content/themes/portalsme/assets/SME%20GOV.ao%20MAUSC.png";
 const urlImg =
-  "https://embaixadangola.ru/wp-content/uploads/2020/10/cropped-banner-1.jpg";
+  "https://embaixadaangolaru.ru/wp-content/uploads/2020/10/cropped-banner-1-1.jpg";
 
 @Component({})
 export class HeaderComponent extends Vue {
